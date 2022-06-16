@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Upload</title>
+</head>
+
+<body>
+<h1>Select Image to Upload</h1>
+<form name="form" id="upload" method="post" enctype="multipart/form-data">
+  <div>
+    <p> Choose images to upload (PNG) </p>
+    <input type="file" name="file" id="file" accept=".png"  />
+  </div>
+  <input type="submit" value="Submit" onclick="upload(); promptForAlert();">
+</form>
+
+<script type="text/javascript">
+  function upload(){
+    var form = new FormData();
+    form.getAll("file");
+  }
+
+</script>
+
+<script type="text/javascript">
+  function promptForAlert() {
+    alert("Check if the image has been uploaded!");
+  }
+</script>
+
+
+</body>
+</html>
